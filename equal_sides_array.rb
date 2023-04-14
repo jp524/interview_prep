@@ -31,6 +31,21 @@ def find_even_index(arr)
   -1
 end
 
+# Third solution
+
+def find_even_index(arr, left_sum = 0, right_sum = 0)
+  arr.each_with_index do |value, i|
+    if i.zero?
+      right_sum = arr[1..].sum
+    else
+      left_sum += arr[i - 1]
+      right_sum -= value
+    end
+    return i if left_sum == right_sum
+  end
+  -1
+end
+
 # puts find_even_index([1,2,3,4,3,2,1]) # expect 3
 # puts find_even_index([1,100,50,-51,1,1]) # expect 1
 # puts find_even_index(Array(-100..-1)) # expect -1
