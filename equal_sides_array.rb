@@ -7,7 +7,7 @@ require 'benchmark'
 # def find_even_index(arr)
 #   (0...arr.length).each do |i|
 #     left_sum = arr[0...i].sum
-#     right_sum = arr[i+1..-1].sum
+#     right_sum = ar®r[i+1..-1].sum
 
 #     return i if left_sum == right_sum
 #   end
